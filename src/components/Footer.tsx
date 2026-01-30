@@ -1,4 +1,5 @@
 import { Mail, Phone, MessageCircle, ArrowRight } from "lucide-react";
+import logo from '@/assets/logo.png';
 
 const Footer = () => {
   const legalLinks = [
@@ -17,11 +18,9 @@ const Footer = () => {
           <div className="space-y-8">
             {/* Logo */}
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-xl gradient-accent flex items-center justify-center font-bold text-xl text-background">
-                S
-              </div>
+              <img src={logo} alt="Subify Nepal" className="h-11 w-auto" />
               <span className="font-bold text-xl tracking-tight">
-                Subify <span className="text-muted-foreground font-medium">Nepal</span>
+                <span className="text-muted-foreground font-medium">Nepal</span>
               </span>
             </div>
 

@@ -1,4 +1,7 @@
 import { ShoppingCart, Zap, Smile, Shield, CheckCircle, MessageCircle, Mail, Lock } from 'lucide-react';
+import activationGemini from '@/assets/activation-gemini.png';
+import activationYoutube from '@/assets/activation-youtube.png';
+import activationChatgpt from '@/assets/activation-chatgpt.png';
 
 const TrustSection = () => {
   const steps = [
@@ -98,18 +101,29 @@ const TrustSection = () => {
             <div>
               <h4 className="font-semibold text-lg mb-4">Recent Successful Activations</h4>
               <div className="grid grid-cols-3 gap-3">
-                {[1, 2, 3].map((i) => (
-                  <div
-                    key={i}
-                    className="aspect-video rounded-xl bg-secondary/50 border border-border flex items-center justify-center overflow-hidden"
-                  >
-                    <div className="w-full h-full bg-gradient-to-br from-muted/30 to-muted/10 flex items-center justify-center">
-                      <CheckCircle size={24} className="text-primary/40" />
-                    </div>
-                  </div>
-                ))}
+                <div className="aspect-video rounded-xl bg-secondary/50 border border-border overflow-hidden hover-lift">
+                  <img 
+                    src={activationGemini} 
+                    alt="Gemini Pro activation" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="aspect-video rounded-xl bg-secondary/50 border border-border overflow-hidden hover-lift">
+                  <img 
+                    src={activationYoutube} 
+                    alt="YouTube Premium activation" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="aspect-video rounded-xl bg-secondary/50 border border-border overflow-hidden hover-lift">
+                  <img 
+                    src={activationChatgpt} 
+                    alt="ChatGPT Plus activation" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
-              <p className="text-xs text-muted-foreground mt-2 text-center">Proof of activations (blurred for privacy)</p>
+              <p className="text-xs text-muted-foreground mt-2 text-center">Proof of recent activations</p>
             </div>
 
             {/* Why Trust Us */}

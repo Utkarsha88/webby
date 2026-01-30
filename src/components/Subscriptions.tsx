@@ -1,9 +1,12 @@
-import { ArrowRight, Clock } from "lucide-react";
+import { ArrowRight, Clock, ChevronUp } from "lucide-react";
+import { useState } from "react";
 import SubscriptionCard from "./SubscriptionCard";
 import { ChatGPTLogo, GoogleLogo, YouTubeLogo } from "./BrandLogos";
 
 const Subscriptions = () => {
-  const subscriptions = [
+  const [showAll, setShowAll] = useState(false);
+
+  const featuredSubscriptions = [
     {
       icon: <ChatGPTLogo size={28} className="text-background" />,
       title: "ChatGPT Plus",
@@ -33,6 +36,21 @@ const Subscriptions = () => {
       hasOffer: true,
     },
     {
+      icon: <YouTubeLogo size={28} />,
+      title: "YouTube Premium",
+      features: [
+        "Ad-free videos on all devices",
+        "Background play & downloads",
+        "YouTube Music Premium included",
+      ],
+      price: "NPR 399",
+      period: "month",
+      hasOffer: false,
+    },
+  ];
+
+  const moreSubscriptions = [
+    {
       icon: <GoogleLogo size={28} />,
       title: "Google AI Pro + 2TB (Monthly)",
       features: [
@@ -45,18 +63,6 @@ const Subscriptions = () => {
         "2 TB cloud storage",
       ],
       price: "NPR 449",
-      period: "month",
-      hasOffer: false,
-    },
-    {
-      icon: <YouTubeLogo size={28} />,
-      title: "YouTube Premium",
-      features: [
-        "Ad-free videos on all devices",
-        "Background play & downloads",
-        "YouTube Music Premium included",
-      ],
-      price: "NPR 399",
       period: "month",
       hasOffer: false,
     },
@@ -78,18 +84,39 @@ const Subscriptions = () => {
           </p>
         </div>
 
-        {/* Cards Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12">
-          {subscriptions.map((sub, index) => (
+        {/* Featured Cards Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
+          {featuredSubscriptions.map((sub, index) => (
             <SubscriptionCard key={sub.title} {...sub} delay={`${index * 0.1}s`} />
           ))}
         </div>
 
-        {/* View All Button */}
+        {/* More Subscriptions (Expandable) */}
+        {showAll && (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12 animate-fade-in">
+            {moreSubscriptions.map((sub, index) => (
+              <SubscriptionCard key={sub.title} {...sub} delay={`${index * 0.1}s`} />
+            ))}
+          </div>
+        )}
+
+        {/* View All / Show Less Button */}
         <div className="text-center mb-10">
-          <button className="btn-primary text-base px-8 py-4 group">
-            View All Subscriptions
-            <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+          <button 
+            onClick={() => setShowAll(!showAll)}
+            className="btn-primary text-base px-8 py-4 group"
+          >
+            {showAll ? (
+              <>
+                Show Less
+                <ChevronUp size={18} className="transition-transform" />
+              </>
+            ) : (
+              <>
+                View All Subscriptions
+                <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+              </>
+            )}
           </button>
         </div>
 

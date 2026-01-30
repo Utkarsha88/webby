@@ -19,9 +19,13 @@ const Subscriptions = () => {
       icon: <Cloud size={28} className="text-background" />,
       title: 'Google AI Pro + 2TB',
       features: [
-        'Gemini 3 Pro with advanced AI',
-        '1,000 AI credits for Flow and Whisk',
-        '2TB cloud storage included',
+        'Gemini 3 Pro with advanced AI, images, and video'
+        '1,000 AI credits for Flow and Whisk'
+        'AI video and filmmaking tools (Veo)'
+        'Higher limits for Code Assist, CLI, and Antigravity'
+        'NotebookLM premium research features'
+        'Gemini inside Google apps'
+        '2 TB cloud storage',
       ],
       price: 'NPR 1399',
       period: 'year',

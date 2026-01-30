@@ -1,6 +1,6 @@
 import { ArrowRight, Clock } from "lucide-react";
 import SubscriptionCard from "./SubscriptionCard";
-import { ChatGPTLogo, GeminiLogo, YouTubeLogo } from "./BrandLogos";
+import { ChatGPTLogo, GoogleLogo, YouTubeLogo } from "./BrandLogos";
 
 const Subscriptions = () => {
   const subscriptions = [
@@ -17,7 +17,7 @@ const Subscriptions = () => {
       hasOffer: false,
     },
     {
-      icon: <GeminiLogo size={28} />,
+      icon: <GoogleLogo size={28} />,
       title: "Google AI Pro + 2TB",
       features: [
         "Gemini 3 Pro with advanced AI, images, and video",

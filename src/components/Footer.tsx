@@ -57,6 +57,7 @@ const Footer = () => {
               href="https://wa.me/9779766015476?text=Hi%20Subify%20Nepal%2C%20I%20want%20to%20buy%20a%20premium%20subscription"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
               className="btn-primary inline-flex"
             >
               <MessageCircle size={18} />

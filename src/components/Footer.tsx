@@ -1,11 +1,11 @@
-import { Mail, Phone, MessageCircle, ArrowRight } from 'lucide-react';
+import { Mail, Phone, MessageCircle, ArrowRight } from "lucide-react";
 
 const Footer = () => {
   const legalLinks = [
-    { name: 'Terms & Conditions', href: '#' },
-    { name: 'Refund Policy', href: '#' },
-    { name: 'Privacy Policy', href: '#' },
-    { name: 'FAQ / Support', href: '#' },
+    { name: "Terms & Conditions", href: "#" },
+    { name: "Refund Policy", href: "#" },
+    { name: "Privacy Policy", href: "#" },
+    { name: "FAQ / Support", href: "#" },
   ];
 
   return (
@@ -54,7 +54,7 @@ const Footer = () => {
 
             {/* Message Button */}
             <a
-              href="https://wa.me/9779766015476"
+              href="https://wa.me/9779766015476?text=Hi%20Subify%20Nepal%2C%20I%20want%20to%20buy%20a%20premium%20subscription"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary inline-flex"
@@ -75,7 +75,10 @@ const Footer = () => {
                     href={link.href}
                     className="text-muted-foreground hover:text-foreground transition-colors text-sm flex items-center gap-2 group"
                   >
-                    <ArrowRight size={14} className="opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                    <ArrowRight
+                      size={14}
+                      className="opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all"
+                    />
                     {link.name}
                   </a>
                 </li>
@@ -100,7 +103,7 @@ const Footer = () => {
       <div className="border-t border-border">
         <div className="container mx-auto py-6">
           <p className="text-center text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Subify Nepal. All rights reserved. 
+            © {new Date().getFullYear()} Subify Nepal. All rights reserved.
             <span className="mx-2">•</span>
             Premium subscription reselling service.
           </p>

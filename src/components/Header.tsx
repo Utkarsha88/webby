@@ -35,7 +35,7 @@ const Header = () => {
           <a href="#home" className="flex items-center gap-2 group">
             <img src={logo} alt="Subify Nepal" className="h-10 w-auto" />
             <span className="font-bold text-lg md:text-xl tracking-tight">
-              <span className="text-muted-foreground font-medium">Nepal</span>
+              Subify <span className="text-muted-foreground font-medium">Nepal</span>
             </span>
           </a>
 

@@ -20,7 +20,7 @@ const Footer = () => {
             <div className="flex items-center gap-2">
               <img src={logo} alt="Subify Nepal" className="h-11 w-auto" />
               <span className="font-bold text-xl tracking-tight">
-                <span className="text-muted-foreground font-medium">Nepal</span>
+                Subify <span className="text-muted-foreground font-medium">Nepal</span>
               </span>
             </div>
 

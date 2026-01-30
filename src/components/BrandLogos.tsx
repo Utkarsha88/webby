@@ -23,23 +23,16 @@ export const GeminiLogo = ({ size = 28, className = "" }: LogoProps) => (
     className={className}
   >
     <defs>
-      <linearGradient id="geminiGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#4285F4" />
-        <stop offset="25%" stopColor="#9B72CB" />
-        <stop offset="50%" stopColor="#D96570" />
-        <stop offset="75%" stopColor="#D96570" />
-        <stop offset="100%" stopColor="#9B72CB" />
+      <linearGradient id="geminiGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+        <stop offset="0%" stopColor="#1E88E5" />
+        <stop offset="50%" stopColor="#6C47FF" />
+        <stop offset="100%" stopColor="#9F6FFF" />
       </linearGradient>
     </defs>
     <path
       fill="url(#geminiGradient)"
-      d="M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12c2.424 0 4.678-.72 6.568-1.956l-.708-.708A10.467 10.467 0 0112 22.5c-5.799 0-10.5-4.701-10.5-10.5S6.201 1.5 12 1.5 22.5 6.201 22.5 12c0 2.242-.705 4.32-1.904 6.026l.708.708A11.956 11.956 0 0024 12c0-6.617-5.383-12-12-12z"
+      d="M12 0C12 6.627 6.627 12 0 12c6.627 0 12 5.373 12 12 0-6.627 5.373-12 12-12-6.627 0-12-5.373-12-12z"
     />
-    <path
-      fill="url(#geminiGradient)"
-      d="M12 3.75a8.25 8.25 0 100 16.5 8.25 8.25 0 000-16.5zM12 18a6 6 0 110-12 6 6 0 010 12z"
-    />
-    <circle fill="url(#geminiGradient)" cx="12" cy="12" r="3" />
   </svg>
 );
 

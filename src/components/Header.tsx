@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import logo from '@/assets/logo.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,11 +33,9 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 rounded-xl gradient-accent flex items-center justify-center font-bold text-lg text-background">
-              S
-            </div>
+            <img src={logo} alt="Subify Nepal" className="h-10 w-auto" />
             <span className="font-bold text-lg md:text-xl tracking-tight">
-              Subify <span className="text-muted-foreground font-medium">Nepal</span>
+              <span className="text-muted-foreground font-medium">Nepal</span>
             </span>
           </a>
 

@@ -67,7 +67,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="/" onClick={handleLogoClick} className="flex items-center gap-2 group">
-            <img src={logo} alt="Subify Nepal" className="h-10 w-auto" />
+            <img src={logo} alt="Subify Nepal" className="h-14 w-auto" />
             <span className="font-bold text-lg md:text-xl tracking-tight">
               Subify <span className="text-muted-foreground font-medium">Nepal</span>
             </span>

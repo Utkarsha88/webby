@@ -19,7 +19,7 @@ const Footer = () => {
           <div className="space-y-8">
             {/* Logo */}
             <div className="flex items-center gap-2">
-              <img src={logo} alt="Subify Nepal" className="h-11 w-auto" />
+              <img src={logo} alt="Subify Nepal" className="h-14 w-auto" />
               <span className="font-bold text-xl tracking-tight">
                 Subify <span className="text-muted-foreground font-medium">Nepal</span>
               </span>

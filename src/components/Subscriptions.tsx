@@ -33,6 +33,22 @@ const Subscriptions = () => {
       hasOffer: true,
     },
     {
+      icon: <GoogleLogo size={28} />,
+      title: "Google AI Pro + 2TB (Monthly)",
+      features: [
+        "Gemini 3 Pro with advanced AI, images, and video",
+        "1,000 AI credits for Flow and Whisk",
+        "AI video and filmmaking tools (Veo)",
+        "Higher limits for Code Assist, CLI, and Antigravity",
+        "NotebookLM premium research features",
+        "Gemini inside Google apps",
+        "2 TB cloud storage",
+      ],
+      price: "NPR 449",
+      period: "month",
+      hasOffer: false,
+    },
+    {
       icon: <YouTubeLogo size={28} />,
       title: "YouTube Premium",
       features: [
@@ -63,7 +79,7 @@ const Subscriptions = () => {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12">
           {subscriptions.map((sub, index) => (
             <SubscriptionCard key={sub.title} {...sub} delay={`${index * 0.1}s`} />
           ))}

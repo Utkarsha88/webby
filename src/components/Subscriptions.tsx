@@ -34,7 +34,11 @@ const Subscriptions = () => {
     {
       icon: <Youtube size={28} className="text-background" />,
       title: "YouTube Premium",
-      features: ["Ad-free videos on all devices", "Background play & downloads", "YouTube Music Premium included"],
+      features: [
+        "Ad-free videos on all devices",
+        "Background play & downloads",
+        "YouTube Music Premium included",
+      ],
       price: "NPR 399",
       period: "month",
       hasOffer: false,

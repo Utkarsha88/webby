@@ -53,17 +53,21 @@ const Footer = () => {
             </div>
 
             {/* Message Button */}
-            <a
-              href="https://wa.me/9779766015476?text=Hi%20Subify%20Nepal%2C%20I%20want%20to%20buy%20a%20premium%20subscription"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={(e) => e.stopPropagation()}
+            <button
+              type="button"
+              onClick={() =>
+                window.open(
+                  "https://wa.me/9779766015476?text=Hi%20Subify%20Nepal%2C%20I%20want%20to%20buy%20a%20premium%20subscription",
+                  "_blank",
+                  "noopener,noreferrer",
+                )
+              }
               className="btn-primary inline-flex"
             >
               <MessageCircle size={18} />
               Message Us Now
               <ArrowRight size={16} />
-            </a>
+            </button>
           </div>
 
           {/* Links */}

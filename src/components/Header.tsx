@@ -55,9 +55,12 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-3">
-            <a href="#contact" className="btn-primary text-sm">
+            <button 
+              onClick={() => window.open('https://wa.me/9779766015476?text=Hi%20Subify%20Nepal%2C%20I%20want%20to%20know%20more', '_blank')}
+              className="btn-primary text-sm"
+            >
               Contact
-            </a>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -84,9 +87,12 @@ const Header = () => {
                 </a>
               ))}
               <div className="px-4 pt-4">
-                <a href="#contact" className="btn-primary w-full text-center text-sm">
+                <button 
+                  onClick={() => window.open('https://wa.me/9779766015476?text=Hi%20Subify%20Nepal%2C%20I%20want%20to%20know%20more', '_blank')}
+                  className="btn-primary w-full text-center text-sm"
+                >
                   Contact
-                </a>
+                </button>
               </div>
             </nav>
           </div>

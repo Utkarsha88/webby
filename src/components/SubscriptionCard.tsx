@@ -22,7 +22,7 @@ const SubscriptionCard = ({
 }: SubscriptionCardProps) => {
   return (
     <div
-      className="relative glass-card p-6 md:p-8 hover-lift group animate-fade-in-up"
+      className="relative glass-card p-6 md:p-8 hover-lift group animate-fade-in-up border border-transparent hover:border-primary/30 transition-all duration-300"
       style={{ animationDelay: delay }}
     >
       {/* Opening Offer Badge */}

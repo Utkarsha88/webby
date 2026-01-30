@@ -38,7 +38,7 @@ const Footer = () => {
                 <div className="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center group-hover:bg-primary/10 transition-colors">
                   <Mail size={18} className="group-hover:text-primary" />
                 </div>
-                <span className="text-sm">subify.np@gmail.com</span>
+                <span className="text-sm">americancom3@gmail.com</span>
               </a>
 
               <a

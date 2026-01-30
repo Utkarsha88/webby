@@ -58,7 +58,13 @@ const SubscriptionCard = ({
       </div>
 
       {/* CTA */}
-      <button className="w-full btn-outline group/btn">
+      <button 
+        onClick={() => {
+          const message = encodeURIComponent(`Hi! I'm interested in the ${title} subscription. Please provide more details.`);
+          window.open(`https://wa.me/9779766015476?text=${message}`, '_blank');
+        }}
+        className="w-full btn-outline group/btn"
+      >
         Get Now
         <ArrowRight size={16} className="transition-transform group-hover/btn:translate-x-1" />
       </button>

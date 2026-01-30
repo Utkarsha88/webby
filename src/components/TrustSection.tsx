@@ -101,26 +101,35 @@ const TrustSection = () => {
             <div>
               <h4 className="font-semibold text-lg mb-4">Recent Successful Activations</h4>
               <div className="grid grid-cols-3 gap-3">
-                <div className="aspect-video rounded-xl bg-secondary/50 border border-border overflow-hidden hover-lift">
+                <div className="relative aspect-video rounded-xl bg-secondary/50 border border-border overflow-hidden hover-lift">
                   <img 
                     src={activationGemini} 
                     alt="Gemini Pro activation" 
                     className="w-full h-full object-cover"
                   />
+                  <div className="absolute top-2 right-2 w-6 h-6 rounded-full bg-emerald-500 flex items-center justify-center">
+                    <CheckCircle size={14} className="text-white" />
+                  </div>
                 </div>
-                <div className="aspect-video rounded-xl bg-secondary/50 border border-border overflow-hidden hover-lift">
+                <div className="relative aspect-video rounded-xl bg-secondary/50 border border-border overflow-hidden hover-lift">
                   <img 
                     src={activationYoutube} 
                     alt="YouTube Premium activation" 
                     className="w-full h-full object-cover"
                   />
+                  <div className="absolute top-2 right-2 w-6 h-6 rounded-full bg-emerald-500 flex items-center justify-center">
+                    <CheckCircle size={14} className="text-white" />
+                  </div>
                 </div>
-                <div className="aspect-video rounded-xl bg-secondary/50 border border-border overflow-hidden hover-lift">
+                <div className="relative aspect-video rounded-xl bg-secondary/50 border border-border overflow-hidden hover-lift">
                   <img 
                     src={activationChatgpt} 
                     alt="ChatGPT Plus activation" 
                     className="w-full h-full object-cover"
                   />
+                  <div className="absolute top-2 right-2 w-6 h-6 rounded-full bg-emerald-500 flex items-center justify-center">
+                    <CheckCircle size={14} className="text-white" />
+                  </div>
                 </div>
               </div>
               <p className="text-xs text-muted-foreground mt-2 text-center">Proof of recent activations</p>

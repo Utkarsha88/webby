@@ -1,46 +1,42 @@
-import { Bot, Cloud, Youtube, ArrowRight, Clock } from 'lucide-react';
-import SubscriptionCard from './SubscriptionCard';
+import { Bot, Cloud, Youtube, ArrowRight, Clock } from "lucide-react";
+import SubscriptionCard from "./SubscriptionCard";
 
 const Subscriptions = () => {
   const subscriptions = [
     {
       icon: <Bot size={28} className="text-background" />,
-      title: 'ChatGPT Plus',
+      title: "ChatGPT Plus",
       features: [
-        'Faster responses with priority access',
-        'Access to GPT-4 & latest models',
-        'Advanced AI features & plugins',
+        "Faster responses with priority access",
+        "Access to GPT-4 & latest models",
+        "Advanced AI features & plugins",
       ],
-      price: 'NPR 499',
-      period: 'month',
+      price: "NPR 499",
+      period: "month",
       hasOffer: false,
     },
     {
       icon: <Cloud size={28} className="text-background" />,
-      title: 'Google AI Pro + 2TB',
+      title: "Google AI Pro + 2TB",
       features: [
-        'Gemini 3 Pro with advanced AI, images, and video'
-        '1,000 AI credits for Flow and Whisk'
-        'AI video and filmmaking tools (Veo)'
-        'Higher limits for Code Assist, CLI, and Antigravity'
-        'NotebookLM premium research features'
-        'Gemini inside Google apps'
-        '2 TB cloud storage',
+        "Gemini 3 Pro with advanced AI, images, and video",
+        "1,000 AI credits for Flow and Whisk",
+        "AI video and filmmaking tools (Veo)",
+        "Higher limits for Code Assist, CLI, and Antigravity",
+        "NotebookLM premium research features",
+        "Gemini inside Google apps",
+        "2 TB cloud storage",
       ],
-      price: 'NPR 1399',
-      period: 'year',
+      price: "NPR 1399",
+      period: "year",
       hasOffer: true,
     },
     {
       icon: <Youtube size={28} className="text-background" />,
-      title: 'YouTube Premium',
-      features: [
-        'Ad-free videos on all devices',
-        'Background play & downloads',
-        'YouTube Music Premium included',
-      ],
-      price: 'NPR 399',
-      period: 'month',
+      title: "YouTube Premium",
+      features: ["Ad-free videos on all devices", "Background play & downloads", "YouTube Music Premium included"],
+      price: "NPR 399",
+      period: "month",
       hasOffer: false,
     },
   ];
@@ -64,11 +60,7 @@ const Subscriptions = () => {
         {/* Cards Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
           {subscriptions.map((sub, index) => (
-            <SubscriptionCard
-              key={sub.title}
-              {...sub}
-              delay={`${index * 0.1}s`}
-            />
+            <SubscriptionCard key={sub.title} {...sub} delay={`${index * 0.1}s`} />
           ))}
         </div>
 

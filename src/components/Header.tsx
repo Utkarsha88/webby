@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import logo from '@/assets/logo.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,6 +24,37 @@ const Header = () => {
     { name: 'Reviews', href: '#reviews' },
   ];
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    setIsMobileMenuOpen(false);
+    
+    if (location.pathname !== '/') {
+      // Navigate to home page first, then scroll to section
+      navigate('/');
+      setTimeout(() => {
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      // Already on home page, just scroll
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    if (location.pathname !== '/') {
+      navigate('/');
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -32,7 +66,7 @@ const Header = () => {
       <div className="container mx-auto">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-2 group">
+          <a href="/" onClick={handleLogoClick} className="flex items-center gap-2 group">
             <img src={logo} alt="Subify Nepal" className="h-10 w-auto" />
             <span className="font-bold text-lg md:text-xl tracking-tight">
               Subify <span className="text-muted-foreground font-medium">Nepal</span>
@@ -45,6 +79,7 @@ const Header = () => {
               <a
                 key={link.name}
                 href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
                 className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-secondary/50"
               >
                 {link.name}
@@ -79,7 +114,7 @@ const Header = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(e) => handleNavClick(e, link.href)}
                   className="px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary/50 transition-colors"
                 >
                   {link.name}

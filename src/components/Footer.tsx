@@ -1,12 +1,13 @@
 import { Mail, Phone, MessageCircle, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from '@/assets/logo.png';
 
 const Footer = () => {
   const legalLinks = [
-    { name: "Terms & Conditions", href: "#" },
-    { name: "Refund Policy", href: "#" },
-    { name: "Privacy Policy", href: "#" },
-    { name: "FAQ / Support", href: "#" },
+    { name: "Terms & Conditions", href: "/terms" },
+    { name: "Refund Policy", href: "/refund" },
+    { name: "Privacy Policy", href: "/privacy" },
+    { name: "FAQ / Support", href: "/faq" },
   ];
 
   return (
@@ -75,8 +76,8 @@ const Footer = () => {
             <ul className="space-y-4">
               {legalLinks.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-muted-foreground hover:text-foreground transition-colors text-sm flex items-center gap-2 group"
                   >
                     <ArrowRight
@@ -84,7 +85,7 @@ const Footer = () => {
                       className="opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all"
                     />
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

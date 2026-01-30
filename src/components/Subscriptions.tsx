@@ -1,10 +1,11 @@
-import { Bot, Cloud, Youtube, ArrowRight, Clock } from "lucide-react";
+import { ArrowRight, Clock } from "lucide-react";
 import SubscriptionCard from "./SubscriptionCard";
+import { ChatGPTLogo, GoogleAILogo, YouTubeLogo } from "./BrandLogos";
 
 const Subscriptions = () => {
   const subscriptions = [
     {
-      icon: <Bot size={28} className="text-background" />,
+      icon: <ChatGPTLogo size={28} className="text-background" />,
       title: "ChatGPT Plus",
       features: [
         "Faster responses with priority access",
@@ -16,7 +17,7 @@ const Subscriptions = () => {
       hasOffer: false,
     },
     {
-      icon: <Cloud size={28} className="text-background" />,
+      icon: <GoogleAILogo size={28} />,
       title: "Google AI Pro + 2TB",
       features: [
         "Gemini 3 Pro with advanced AI, images, and video",
@@ -32,7 +33,7 @@ const Subscriptions = () => {
       hasOffer: true,
     },
     {
-      icon: <Youtube size={28} className="text-background" />,
+      icon: <YouTubeLogo size={28} />,
       title: "YouTube Premium",
       features: [
         "Ad-free videos on all devices",
